@@ -1,29 +1,16 @@
 {
-  "name": "Erika_rest_api",
+  "name": "Erika_client_for_rest_api",
   "version": "1.0.0",
   "description": "Adding Angular to two resource REST API.",
   "main": "server.js",
-  "dependencies": {
-    "angular": "^1.5.0",
-    "angular-route": "^1.5.0",
-    "bcrypt": "^0.8.5",
-    "body-parser": "^1.14.2",
-    "chai": "^3.4.1",
-    "chai-http": "^1.0.0",
-    "eslint": "^1.10.3",
-    "express": "^4.13.4",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^1.1.1",
-    "gulp-mocha": "^2.2.0",
-    "jsonwebtoken": "^5.5.4",
-    "mongoose": "^4.3.6",
-    "validator": "^4.5.2",
-    "webpack-stream": "^3.1.0"
+  "directories": {
+    "test": "test"
   },
   "devDependencies": {
+    "angular": "^1.5.0",
     "angular-mocks": "^1.5.0",
-    "babel-core": "^6.5.2",
-    "babel-loader": "^6.2.3",
+    "babel-core": "^6.6.5",
+    "babel-loader": "^6.2.4",
     "gulp-minify-css": "^1.2.4",
     "html-loader": "^0.4.3",
     "jasmine-core": "^2.4.1",
@@ -33,8 +20,11 @@
     "karma-jasmine": "^0.3.7",
     "karma-phantomjs-launcher": "^1.0.0",
     "mocha": "^2.3.4",
-    "phantomjs-prebuilt": "^2.1.4",
-    "webpack": "^1.12.13"
+    "phantomjs-prebuilt": "^2.1.5",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   },
   "scripts": {
     "test": "mocha",
