@@ -18,23 +18,23 @@
   "homepage": "https://github.com/erikawho/rest_api#readme",
   "devDependencies": {
     "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
     "body-parser": "^1.14.2",
+    "bcrypt": "^0.8.5",
     "chai": "^3.4.1",
     "chai-http": "^1.0.0",
     "eslint": "^1.10.3",
-    "express": "^4.13.4",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.1",
     "gulp-mocha": "^2.2.0",
-    "mocha": "^2.3.4",
-    "mongoose": "^4.3.6",
-    "webpack-stream": "^3.1.0"
-  },
-  "dependencies": {
-    "bcrypt": "^0.8.5",
-    "express": "^4.13.4",
     "gulp-nodemon": "^2.0.6",
     "jsonwebtoken": "^5.5.4",
+    "mocha": "^2.3.4",
+    "mongoose": "^4.3.6",
+    "webpack-stream": "^3.1.0",
     "validator": "^4.5.2"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
