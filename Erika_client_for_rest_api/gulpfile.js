@@ -2,6 +2,9 @@
 
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
+const sass = require('gulp-sass');
+const maps = require('gulp-sourcemaps');
+const minifycss = require('gulp-minify-css');
 const webpack = require('webpack-stream');
 const babel = require('babel-loader');
 const html = require('html-loader');
@@ -15,6 +18,15 @@ gulp.task('test', () => {
 
 gulp.task('html:dev', () => {
   gulp.src(__dirname + '/app/**/*.html')
+    .pipe(gulp.dest(__dirname + '/build'));
+});
+
+gulp.task('sass:dev', () => {
+  gulp.src(__dirname + '/app/**/*.scss')
+    .pipe(maps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(minifyCss())
+    .pipe(maps.write('./'))
     .pipe(gulp.dest(__dirname + '/build'));
 });
 
@@ -51,4 +63,4 @@ gulp.task('lint', () => {
 });
 
 gulp.task('build:dev', ['webpack:dev', 'html:dev', 'css:dev']);
-gulp.task('default', ['build:dev', 'lint']);
+gulp.task('default', ['build:dev', 'sass:dev', 'lint']);
