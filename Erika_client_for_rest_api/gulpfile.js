@@ -9,8 +9,6 @@ const webpack = require('webpack-stream');
 const babel = require('babel-loader');
 const html = require('html-loader');
 
-// const scripts = ['**/.js', '!node_modules/**'];
-
 gulp.task('test', () => {
   return gulp.src('test/*.js')
     .pipe(mocha({ reporter: 'nyan' }));
